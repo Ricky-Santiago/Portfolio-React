@@ -59,7 +59,11 @@
   display: none;
   letter-spacing: 0px; /* Archivo Black no necesita letter-spacing negativo */
 }
-
+@media (max-width: 767px) {
+  .container {
+    flex-direction: row-reverse;
+  }
+}
 @media (min-width: 768px) {
   .logoText {
     display: block;
@@ -132,7 +136,7 @@
   border: none;
   cursor: pointer;
   position: relative;
-  z-index: 1001;
+  z-index: 1100;
 }
 
 @media (min-width: 768px) {
@@ -187,20 +191,21 @@
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.98);
-  backdrop-filter: blur(10px);
-  transform: translateX(100%);
+  width: 80%; /* O puedes usar 300px */
+  height: 100%;
+  transform: translateX(-100%);
   transition: transform 0.3s ease;
   padding-top: 80px;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
+  z-index: 1002;
+  pointer-events: none;
 }
 
 .mobileNav.open {
   transform: translateX(0);
+  pointer-events: auto;
 }
 
 @media (min-width: 768px) {
@@ -221,10 +226,9 @@
 }
 
 .mobileNavLink {
+  font-size: 1rem;
   color: rgba(255, 255, 255, 0.8);
-  text-decoration: none;
-  font-size: 2rem;
-  font-weight: 600;
+  font-weight: 500;
   transition: all 0.3s ease;
   display: block;
 }
