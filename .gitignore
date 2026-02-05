@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Archivos específicos para portafolio
+.env
+.env.local
+.env.production
