@@ -1,7 +1,7 @@
 @import './styles/variables.css';
 @import './styles/global.css';
 
-/* ===== ESTILOS GLOBALES CON FONDO NEGRO ===== */
+
 :root {
   --yellow-primary: #FFD700;
   --yellow-secondary: #FFA500;
@@ -27,7 +27,7 @@ body {
   z-index: 1;
 }
 
-/* Fondo negro para todas las secciones */
+
 .portfolio-section {
   padding: var(--spacing-xl) 0;
   background-color: transparent;
@@ -35,7 +35,7 @@ body {
   z-index: 1;
 }
 
-/* Títulos en blanco para contraste */
+
 .section-title {
   font-size: 2.5rem;
   margin-bottom: var(--spacing-lg);
@@ -56,7 +56,7 @@ body {
   border-radius: 2px;
 }
 
-/* Responsive */
+
 @media (max-width: 768px) {
   .section-title {
     font-size: 2rem;
@@ -67,7 +67,7 @@ body {
   }
 }
 
-/* Scrollbar personalizado */
+
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -83,4 +83,13 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--yellow-secondary);
+}
+
+a {
+  text-decoration: none;
+}
+
+
+#root a {
+  text-decoration: none;
 }

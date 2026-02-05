@@ -1,4 +1,3 @@
-/* Estilos específicos de la App */
 #root {
   max-width: 100%;
   margin: 0;
@@ -7,12 +6,12 @@
   z-index: 2;
 }
 
-/* Asegurar que el contenido esté sobre el fondo */
+
 .layout {
   background-color: transparent;
 }
 
-/* Utilidades */
+
 .text-center {
   text-align: center;
 }
@@ -29,12 +28,12 @@
 .mb-4 { margin-bottom: var(--spacing-lg); }
 .mb-5 { margin-bottom: var(--spacing-xl); }
 
-/* Asegurar que el texto sea visible sobre fondo negro */
+
 * {
   color: #FFFFFF;
 }
 
-/* Enlaces visibles */
+
 a {
   color: #FFD700;
   text-decoration: none;
