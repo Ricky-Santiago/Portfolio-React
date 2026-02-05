@@ -7,8 +7,8 @@
 
 Portafolio profesional desarrollado con React, TypeScript y Vite. Una aplicación moderna, rápida y responsive que muestra proyectos, habilidades y experiencia.
 
-🔗 **Demo:** [tu-usuario.github.io/Portfolio-React](https://tu-usuario.github.io/Portfolio-React)  
-📧 **Contacto:** tu-email@ejemplo.com
+🔗 **Demo:** [tu-usuario.github.io/Portfolio-React](https://github.com/Ricky-Santiago/Portfolio-React)  
+📧 **Contacto:** santiagoricky2004@gmail.com
 
 ---
 
@@ -38,29 +38,6 @@ Portafolio profesional desarrollado con React, TypeScript y Vite. Una aplicació
 - **GitHub Pages** - Deployment
 - **ESLint** - Code linting
 - **Prettier** - Code formatting
-
----
-
-## 📁 Estructura
-Portfolio-React/
-├── src/
-│ ├── components/ # Reusable components
-│ │ ├── Header/ # Navigation
-│ │ ├── Footer/ # Footer
-│ │ ├── Layout/ # Main layout
-│ │ └── UI/ # UI components
-│ ├── pages/ # App pages
-│ │ ├── Home/ # Homepage
-│ │ ├── Projects/ # Projects gallery
-│ │ ├── About/ # About me
-│ │ └── Contact/ # Contact form
-│ ├── styles/ # Global styles
-│ ├── types/ # TypeScript types
-│ ├── utils/ # Utilities
-│ ├── App.tsx # Main component
-│ └── main.tsx # Entry point
-├── public/ # Static files
-└── package.json # Dependencies
 
 ---
 
