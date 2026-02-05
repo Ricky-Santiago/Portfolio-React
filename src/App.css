@@ -3,6 +3,13 @@
   max-width: 100%;
   margin: 0;
   padding: 0;
+  position: relative;
+  z-index: 2;
+}
+
+/* Asegurar que el contenido esté sobre el fondo */
+.layout {
+  background-color: transparent;
 }
 
 /* Utilidades */
@@ -21,3 +28,19 @@
 .mb-3 { margin-bottom: var(--spacing-md); }
 .mb-4 { margin-bottom: var(--spacing-lg); }
 .mb-5 { margin-bottom: var(--spacing-xl); }
+
+/* Asegurar que el texto sea visible sobre fondo negro */
+* {
+  color: #FFFFFF;
+}
+
+/* Enlaces visibles */
+a {
+  color: #FFD700;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #FFA500;
+  text-decoration: underline;
+}
