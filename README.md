@@ -7,7 +7,7 @@
 
 Portafolio profesional desarrollado con React, TypeScript y Vite. Una aplicación moderna, rápida y responsive que muestra proyectos, habilidades y experiencia.
 
-🔗 **Demo:** [tu-usuario.github.io/Portfolio-React](https://github.com/Ricky-Santiago/Portfolio-React)  
+🔗 **Demo:** [https://github.com/Ricky-Santiago/Portfolio-React](https://github.com/Ricky-Santiago/Portfolio-React)  
 📧 **Contacto:** santiagoricky2004@gmail.com
 
 ---
