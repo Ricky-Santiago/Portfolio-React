@@ -17,15 +17,13 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Cerrar menú móvil al cambiar de ruta (sin setState dentro del efecto)
-  const currentPath = location.pathname;
+  // Cerrar menú móvil al cambiar de ruta
+  const { pathname } = location;
   useEffect(() => {
-    // Solo cierra si está abierto
-    if (isMobileMenuOpen) {
-      setIsMobileMenuOpen(false);
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [currentPath]); // Solo depende del path, no del estado
+    // React will bail out if already false, avoiding unnecessary re-renders
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setIsMobileMenuOpen(false);
+  }, [pathname]);
 
   const navLinks = [
     { path: '/', label: 'Home' },
@@ -74,13 +72,18 @@ const Header = () => {
           className={styles.mobileMenuButton}
           onClick={toggleMobileMenu}
           aria-label="Toggle menu"
+          aria-expanded={isMobileMenuOpen}
+          aria-controls="mobile-nav"
         >
           <span className={`${styles.hamburger} ${isMobileMenuOpen ? styles.open : ''}`}></span>
         </button>
       </div>
 
       {/* Mobile Navigation */}
-      <div className={`${styles.mobileNav} ${isMobileMenuOpen ? styles.open : ''}`}>
+      <div
+        id="mobile-nav"
+        className={`${styles.mobileNav} ${isMobileMenuOpen ? styles.open : ''}`}
+      >
         <ul className={styles.mobileNavList}>
           {navLinks.map((link) => (
             <li key={link.path}>

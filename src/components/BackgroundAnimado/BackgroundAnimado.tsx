@@ -35,6 +35,8 @@ const BackgroundAnimado: React.FC = () => {
       canvas.style.width = `${width}px`;
       canvas.style.height = `${height}px`;
 
+      // Reset the transform so DPR scaling does not compound on resize
+      ctx.setTransform(1, 0, 0, 1, 0, 0);
       ctx.scale(dpr, dpr);
     };
 
@@ -141,6 +143,8 @@ const BackgroundAnimado: React.FC = () => {
     <canvas
       ref={canvasRef}
       className={styles.backgroundContainer}
+      aria-hidden="true"
+      role="presentation"
     />
   );
 };
