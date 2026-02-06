@@ -141,6 +141,8 @@ const BackgroundAnimado: React.FC = () => {
     <canvas
       ref={canvasRef}
       className={styles.backgroundContainer}
+      aria-hidden="true"
+      role='presentation'
     />
   );
 };
