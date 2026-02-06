@@ -1,11 +1,17 @@
-/* Estilos específicos de la App */
 #root {
   max-width: 100%;
   margin: 0;
   padding: 0;
+  position: relative;
+  z-index: 2;
 }
 
-/* Utilidades */
+
+.layout {
+  background-color: transparent;
+}
+
+
 .text-center {
   text-align: center;
 }
@@ -21,3 +27,19 @@
 .mb-3 { margin-bottom: var(--spacing-md); }
 .mb-4 { margin-bottom: var(--spacing-lg); }
 .mb-5 { margin-bottom: var(--spacing-xl); }
+
+
+* {
+  color: #FFFFFF;
+}
+
+
+a {
+  color: #FFD700;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #FFA500;
+  text-decoration: underline;
+}

@@ -1,16 +1,46 @@
 @import './styles/variables.css';
 @import './styles/global.css';
 
-/* Estilos específicos del portafolio */
+
+:root {
+  --yellow-primary: #FFD700;
+  --yellow-secondary: #FFA500;
+  --yellow-light: #FFF8DC;
+  --dark-bg: #000000;
+  --text-light: #FFFFFF;
+  --text-gray: #CCCCCC;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--dark-bg);
+  color: var(--text-light);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+#root {
+  position: relative;
+  z-index: 1;
+}
+
+
 .portfolio-section {
   padding: var(--spacing-xl) 0;
+  background-color: transparent;
+  position: relative;
+  z-index: 1;
 }
+
 
 .section-title {
   font-size: 2.5rem;
   margin-bottom: var(--spacing-lg);
   text-align: center;
-  color: var(--dark-color);
+  color: var(--text-light);
   position: relative;
 }
 
@@ -22,11 +52,11 @@
   transform: translateX(-50%);
   width: 60px;
   height: 4px;
-  background: var(--primary-color);
+  background: var(--yellow-primary);
   border-radius: 2px;
 }
 
-/* Responsive */
+
 @media (max-width: 768px) {
   .section-title {
     font-size: 2rem;
@@ -35,4 +65,31 @@
   .portfolio-section {
     padding: var(--spacing-lg) 0;
   }
+}
+
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #111;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--yellow-primary);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--yellow-secondary);
+}
+
+a {
+  text-decoration: none;
+}
+
+
+#root a {
+  text-decoration: none;
 }

@@ -1,0 +1,240 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  font-family: 'Archivo Black', sans-serif;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  border-bottom: 1px solid rgba(218, 165, 32, 0.1);
+}
+
+.header.scrolled {
+  background: rgba(0, 0, 0, 0.95);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(218, 165, 32, 0.3);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.logoIcon {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #DAA520, #FFD700);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #000;
+}
+
+.logoText {
+  font-size: 1.25rem;
+  font-weight: 900; /* Archivo Black solo tiene este peso */
+  color: #DAA520;
+  display: none;
+  letter-spacing: 0px; /* Archivo Black no necesita letter-spacing negativo */
+}
+@media (max-width: 767px) {
+  .container {
+    flex-direction: row-reverse;
+  }
+}
+@media (min-width: 768px) {
+  .logoText {
+    display: block;
+  }
+}
+
+/* Desktop Navigation */
+.desktopNav {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .desktopNav {
+    display: block;
+  }
+}
+
+.navList {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navLink {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.navLink::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: #DAA520;
+  transition: width 0.3s ease;
+}
+
+.navLink:hover {
+  color: #DAA520;
+}
+
+.navLink:hover::after {
+  width: 80%;
+}
+
+.navLink.active {
+  color: #DAA520;
+  background: rgba(218, 165, 32, 0.1);
+}
+
+/* Mobile Menu Button */
+.mobileMenuButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 1100;
+}
+
+@media (min-width: 768px) {
+  .mobileMenuButton {
+    display: none;
+  }
+}
+
+.hamburger {
+  width: 24px;
+  height: 2px;
+  background: #DAA520;
+  position: relative;
+  transition: all 0.3s ease;
+  display: block;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  background: #DAA520;
+  transition: all 0.3s ease;
+}
+
+.hamburger::before {
+  top: -8px;
+}
+
+.hamburger::after {
+  top: 8px;
+}
+
+.hamburger.open {
+  background: transparent;
+}
+
+.hamburger.open::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.hamburger.open::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+/* Mobile Navigation */
+.mobileNav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 80%; /* O puedes usar 300px */
+  height: 100%;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  padding-top: 80px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  z-index: 1002;
+  pointer-events: none;
+}
+
+.mobileNav.open {
+  transform: translateX(0);
+  pointer-events: auto;
+}
+
+@media (min-width: 768px) {
+  .mobileNav {
+    display: none;
+  }
+}
+
+.mobileNavList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.mobileNavList li {
+  margin: 2rem 0;
+}
+
+.mobileNavLink {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: block;
+}
+
+.mobileNavLink:hover,
+.mobileNavLink.active {
+  color: #DAA520;
+  transform: scale(1.1);
+}
