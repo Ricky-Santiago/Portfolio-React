@@ -3,6 +3,7 @@ import styles from "./Hero.module.css";
 import avatarImage from "../../../assets/images/avatar.png";
 import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+import { Link } from "react-router-dom";
 import { ReactTyped } from "react-typed";
 
 const Hero = () => {
@@ -36,9 +37,9 @@ const Hero = () => {
           </p>
 
           <div className={styles.ctaContainer}>
-            <a href="#about" className={styles.aboutButton}>
+            <Link to="/about" className={styles.aboutButton}>
               About Me ↓
-            </a>
+            </Link>
 
             <div className={styles.socialLinks}>
               <a
