@@ -1,0 +1,287 @@
+.heroSection {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 2rem 2rem;
+  width: 100%;
+}
+
+.heroContainer {
+  max-width: 1150px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  align-items: center;
+}
+
+
+.leftContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.greeting {
+  font-family: "Archivo Black", sans-serif;
+  font-size: 4rem;
+  font-weight: 900;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.name {
+  font-family: "Archivo Black", sans-serif;
+  font-size: 4rem;
+  font-weight: 900;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.nameHighlight {
+  color: #daa520;
+}
+
+.profession {
+  font-family: "Inter", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+}
+
+.professionHighlight {
+  color: #daa520;
+  font-weight: 600;
+}
+
+
+.ctaContainer {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+
+.aboutButton {
+  padding: 0.85rem 2rem;
+  background: transparent;
+  color: #daa520;
+  border: 2px solid #daa520;
+  border-radius: 50px;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.aboutButton:hover {
+  background: #daa520;
+  color: #000000;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(218, 165, 32, 0.3);
+}
+
+
+.socialLinks {
+  display: flex;
+  gap: 1rem;
+}
+
+.socialIcon {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  color: rgba(255, 255, 255, 0.8);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.socialIcon:hover {
+  background: #daa520;
+  color: #000000;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(218, 165, 32, 0.4);
+}
+
+
+.rightContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: linear-gradient(
+    135deg,
+    rgba(218, 165, 32, 0.2),
+    rgba(255, 215, 0, 0.1)
+  );
+  border: 3px solid #daa520;
+  box-shadow:
+    0 0 40px rgba(218, 165, 32, 0.3),
+    0 0 80px rgba(218, 165, 32, 0.1);
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+.avatarImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+
+@media (max-width: 1024px) {
+  .heroContainer {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+    text-align: center;
+  }
+
+  .leftContent {
+    order: 2;
+    align-items: center;
+  }
+
+  .rightContent {
+    order: 1;
+  }
+
+  .greeting,
+  .name {
+    font-size: 3.5rem;
+  }
+
+  .profession {
+    font-size: 1.3rem;
+  }
+
+  .ctaContainer {
+    justify-content: center;
+  }
+
+  .imageWrapper {
+    width: 380px;
+    height: 380px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .heroSection {
+    padding: 120px 1.5rem 2rem;
+  }
+
+  .heroContainer {
+    gap: 3rem;
+  }
+
+  .greeting,
+  .name {
+    font-size: 2.5rem;
+  }
+
+  .profession {
+    font-size: 1.1rem;
+  }
+
+  .ctaContainer {
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+  }
+
+  .aboutButton {
+    width: 100%;
+    justify-content: center;
+    max-width: 300px;
+  }
+
+  .socialLinks {
+    justify-content: center;
+  }
+
+  .imageWrapper {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .greeting,
+  .name {
+    font-size: 2rem;
+  }
+
+  .profession {
+    font-size: 1rem;
+  }
+
+  .imageWrapper {
+    width: 250px;
+    height: 250px;
+  }
+
+  .socialIcon {
+    width: 40px;
+    height: 40px;
+  }
+  .professionHighlight {
+    color: #daa520 !important;
+    font-weight: 600;
+    display: inline-block;
+    min-height: 1.5em;
+  }
+  .professionHighlight span {
+  color: #DAA520 !important;
+}
+  @keyframes blink {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+
+  
+  .professionHighlight {
+    color: #daa520;
+    font-weight: 600;
+    display: inline-block;
+    min-height: 1.5em; 
+  }
+}
